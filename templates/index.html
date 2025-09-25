@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Choose Your Meal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <!-- Settings modal trigger & modal -->
+  <button class="settings-btn" id="settingsBtn" aria-label="Settings">⚙️</button>
+  <div class="modal" id="settingsModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <iframe src="/settings" class="modal-iframe" title="Settings"></iframe>
+    </div>
+  </div>
+
+  <!-- Cart button (arriba del micrófono) -->
+  <button class="cart-btn" id="cartBtn" aria-label="Carrito">🛒<span class="cart-count" id="cartCount">0</span></button>
+
+  <!-- Cart Modal (tipo chat lateral con flecha) -->
+  <div class="modal" id="cartModal" aria-hidden="true">
+    <div class="modal-backdrop" id="cartBackdrop"></div>
+    <div class="modal-dialog cart-dialog">
+      <button class="modal-close" id="cartClose" aria-label="Cerrar">✕</button>
+      <h2 class="cart-title">Tu carrito</h2>
+      <div class="cart-body">
+        <ul id="cartItems" class="cart-items"></ul>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">Total: $<span id="cartTotal">0.00</span></div>
+        <div class="cart-actions">
+          <button class="btn btn-reset" id="cartReset" type="button">Vaciar</button>
+          <button class="btn btn-pay" id="checkoutBtn" type="button" disabled>Pagar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal" id="checkoutModal" aria-hidden="true">
+    <div class="modal-backdrop" id="checkoutBackdrop"></div>
+    <div class="modal-dialog checkout-dialog">
+      <button class="modal-close" id="checkoutClose" aria-label="Cerrar">✕</button>
+      <h2 class="cart-title">Checkout</h2>
+
+      <div class="checkout-body">
+        <div class="checkout-summary">
+          <h3>Resumen de pedido</h3>
+          <ul id="checkoutSummary" class="cart-items"></ul>
+          <div class="checkout-total">Total: $<span id="checkoutTotal">0.00</span></div>
+        </div>
+
+        <form id="checkoutForm" class="checkout-form" novalidate>
+          <div class="form-row">
+            <label for="cName">Nombre</label>
+            <input id="cName" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="cPhone">Teléfono</label>
+            <input id="cPhone" type="tel" autocomplete="tel" required>
+          </div>
+
+          <div class="form-row">
+            <label for="cEmail">Email</label>
+            <input id="cEmail" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="cCard">Número de tarjeta</label>
+              <input id="cCard" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="4111 1111 1111 1111" required>
+            </div>
+
+            <div class="form-row">
+              <label for="cExp">Expiración</label>
+              <input id="cExp" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/YY" required>
+            </div>
+
+            <div class="form-row">
+              <label for="cCVV">CVV</label>
+              <input id="cCVV" type="password" inputmode="numeric" autocomplete="cc-csc" placeholder="123" required>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="checkout-footer">
+        <button class="btn btn-primary" id="payConfirmBtn" type="button" disabled>Finalizar compra</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal" id="successModal" aria-hidden="true">
+    <div class="modal-backdrop" id="successBackdrop"></div>
+    <div class="modal-dialog success-dialog">
+      <h2 class="cart-title">Operación exitosa</h2>
+      <div class="success-body">
+        <p>La orden se ha realizado con éxito.</p>
+      </div>
+      <div class="success-footer">
+        <button class="btn btn-pay" id="successOkBtn" type="button">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mic button -->
+  <button class="mic-btn" id="micBtn" title="Start voice assistant">🎤</button>
+
+  <header>
+    <h1>Choose Your Meal</h1>
+  </header>
+
+  <main>
+    <!-- NUEVO: layout grid + detalle -->
+    <section class="menu-section">
+      <!-- Panel de detalle (aparece arriba; empuja el grid hacia abajo) -->
+      <div id="detailPanel" class="detail-panel" aria-hidden="true">
+        <div class="detail-inner">
+          <div class="detail-image">
+            <img id="detailImg" alt="">
+          </div>
+          <div class="detail-info">
+            <h2 id="detailName"></h2>
+            <div class="detail-price" id="detailPrice"></div>
+            <p id="detailDesc" class="detail-desc"></p>
+            <div id="detailIngr" class="detail-ingredients"></div>
+
+            <div class="add-to-cart-wrap">
+              <button class="btn add-to-cart" id="addToCartBtn" type="button" disabled>Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid de ítems -->
+      <div id="menuGrid" class="menu-grid"></div>
+    </section>
+  </main>
+
+  <!-- Cliente Socket.IO -->
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" crossorigin="anonymous"></script>
+
+  <!-- Config global para app.js -->
+  <script>const API_MENU="/api/menu";</script>
+
+  <!-- JS principal -->
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

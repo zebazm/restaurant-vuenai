@@ -1,0 +1,11 @@
+name,price,img_ref,ingredients,description
+Big Burger Combo,14.89,https://restaurant.vuen.ai/static/Menu/combo-postobon.png,"Beef, cheese, lettuce, tomato, pickles, fries, drink","A hearty combo with our signature double cheeseburger, crispy fries, and a drink."
+Postobon Manzana Drink,1.49,https://restaurant.vuen.ai/static/Menu/manzana-postobon-350-RET-1.png,Apple soda,Refreshing apple-flavored soda by Postobon.
+Baked Apple Pie,1.79,https://restaurant.vuen.ai/static/Menu/Apple_Pie.png,"Apples, pastry crust, cinnamon",Classic warm apple pie with cinnamon.
+Fries,3.19,https://restaurant.vuen.ai/static/Menu/Fries.png,"Potatoes, salt, oil","Golden, crispy French fries."
+Crispy Fish Sandwich,5.29,https://restaurant.vuen.ai/static/Menu/Filet_Fish_Sandwich.png,"Fried fish, tartar sauce, lettuce, bun",Crispy fish fillet with tartar sauce on a soft bun.
+Chicken Nuggets (6pc),4.49,https://restaurant.vuen.ai/static/Menu/Chicken_Nuggets__6_pc.png,"Chicken, breading, sauces","Six-piece chicken nuggets, perfect for sharing."
+Crispy Chicken Sandwich,4.99,https://restaurant.vuen.ai/static/Menu/Crispy_Chicken_Sandwich.png,"Fried chicken, pickles, bun",Juicy fried chicken with pickles on a toasted bun.
+Hamburger,2.99,https://restaurant.vuen.ai/static/Menu/Hamburger.png,"Beef patty, bun",Simple and classic hamburger.
+Cheeseburger,3.49,https://restaurant.vuen.ai/static/Menu/Cheeseburger.png,"Beef, cheese, bun",Classic cheeseburger with melted cheese.
+Double Cheeseburger,5.79,https://restaurant.vuen.ai/static/Menu/Double_Cheeseburger.png,"Two beef patties, double cheese, bun",Two patties and double cheese for extra hunger.

@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Big Burger Combo",
+    "price": 14.89,
+    "img_ref": "https://restaurant.vuen.ai/static/Menu/combo-postobon.png",
+    "ingredients": "Beef, cheese, lettuce, tomato, pickles, fries, drink",
+    "description": "A hearty combo with our signature double cheeseburger, crispy fries, and a drink."
+  },
+  {
+    "name": "Postobon Manzana Drink",
+    "price": 1.49,
+    "img_ref": "https://restaurant.vuen.ai/static/Menu/manzana-postobon-350-RET-1.png",
+    "ingredients": "Apple soda",
+    "description": "Refreshing apple-flavored soda by Postobon."
+  },
+  {
+    "name": "Baked Apple Pie",
+    "price": 1.79,
+    "img_ref": "https://restaurant.vuen.ai/static/Menu/Apple_Pie.png",
+    "ingredients": "Apples, pastry crust, cinnamon",
+    "description": "Classic warm apple pie with cinnamon."
+  },
+  {
+    "name": "Fries",
+    "price": 3.19,
+    "img_ref": "https://restaurant.vuen.ai/static/Menu/Fries.png",
+    "ingredients": "Potatoes, salt, oil",
+    "description": "Golden, crispy French fries."
+  },
+  {
+    "name": "Crispy Fish Sandwich",
+    "price": 5.29,
+    "img_ref": "https://restaurant.vuen.ai/static/Menu/Filet_Fish_Sandwich.png",
+    "ingredients": "Fried fish, tartar sauce, lettuce, bun",
+    "description": "Crispy fish fillet with tartar sauce on a soft bun."
+  },
+  {
+    "name": "Chicken Nuggets (6pc)",
+    "price": 4.49,
+    "img_ref": "https://restaurant.vuen.ai/static/Menu/Chicken_Nuggets__6_pc.png",
+    "ingredients": "Chicken, breading, sauces",
+    "description": "Six-piece chicken nuggets, perfect for sharing."
+  },
+  {
+    "name": "Crispy Chicken Sandwich",
+    "price": 4.99,
+    "img_ref": "https://restaurant.vuen.ai/static/Menu/Crispy_Chicken_Sandwich.png",
+    "ingredients": "Fried chicken, pickles, bun",
+    "description": "Juicy fried chicken with pickles on a toasted bun."
+  },
+  {
+    "name": "Hamburger",
+    "price": 2.99,
+    "img_ref": "https://restaurant.vuen.ai/static/Menu/Hamburger.png",
+    "ingredients": "Beef patty, bun",
+    "description": "Simple and classic hamburger."
+  },
+  {
+    "name": "Cheeseburger",
+    "price": 3.49,
+    "img_ref": "https://restaurant.vuen.ai/static/Menu/Cheeseburger.png",
+    "ingredients": "Beef, cheese, bun",
+    "description": "Classic cheeseburger with melted cheese."
+  },
+  {
+    "name": "Double Cheeseburger",
+    "price": 5.79,
+    "img_ref": "https://restaurant.vuen.ai/static/Menu/Double_Cheeseburger.png",
+    "ingredients": "Two beef patties, double cheese, bun",
+    "description": "Two patties and double cheese for extra hunger."
+  }
+]

@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu Settings</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="settings-header">
+    <h2>Menu Settings</h2>
+    <a href="/" class="back-link">← Back</a>
+  </header>
+  <main>
+    <section class="editor">
+      <div class="toolbar">
+        <button id="addRow">Add item</button>
+        <button id="saveMenu">Save</button>
+        <button id="downloadMenu">Download JSON</button>
+        <label class="file">Load JSON <input type="file" id="loadMenu" accept="application/json"></label>
+        <span class="hint">Edits reflect on the main page.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="menuTable">
+          <thead><tr><th>#</th><th>Name</th><th>Price</th><th>Image URL</th><th>Ingredients</th><th>Description</th><th>Del</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script>const API_MENU="/api/menu";</script>
+  <script src="{{ url_for('static', filename='settings.js') }}"></script>
+</body>
+</html>
