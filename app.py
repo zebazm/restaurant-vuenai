@@ -656,4 +656,5 @@ def order_status_transition():
     return {"ok": False, "error": "Unknown 'to' state"}, 400
 
 if __name__ == "__main__":
-    socketio.run(app, debug=True)
+    port = int(os.environ.get("PORT", 8080))   # DO asigna PORT=8080 para digital ocean :v
+    socketio.run(app, host="0.0.0.0", port=port, debug=False)
